@@ -21,8 +21,6 @@ taskInput.addEventListener("keydown", (e) => {
 
 clearCompletedBtn.addEventListener("click", clearCompleted);
 
-renderTodos();
-
 function addTodo(text) {
   if (text.trim() === "") retun;
 
