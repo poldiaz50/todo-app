@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--font family-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Rationale:regular"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>
+          <i class="fas fa-check-circle"></i>
+          Mis Tareas
+        </h1>
+        <p id="date"></p>
+      </header>
+      <div class="todo-input">
+        <input type="text" id="task-input" placeholder="Que necesitas hacer?" />
+        <button id="add-task">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+      <div class="filters">
+        <span class="filter active" data-filter="all"> Todas </span>
+        <span class="filter" data-filter="active"> Activas </span>
+        <span class="filter" data-filter="completed"> Completadas </span>
+      </div>
+      <div class="todos-container">
+        <ul id="todos-list">
+          <!--la lista de items se insertara con el scrip de js-->
+          <!--<li class="todo-item">
+            <label class="checkbox-container">
+                <input type="checkbox" class="todo-checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <span class="todo-item-text">Comprar alimentos</span>
+            <button class="delete-btn"><i class="fas fa-times"></i></button>
+          </li>
+          -->
+        </ul>
+        <div class="empty-state hidden">
+          <i class="fas fa-clipboard-list"></i>
+          <p>No hay tareas aun...</p>
+        </div>
+      </div>
+      <footer>
+        <p id="items-left">quedan 0 items</p>
+        <button id="clear-completed">Limpiar completadas</button>
+      </footer>
+    </div>
+    <script src="scrip.js"></script>
+  </body>
+</html>
